@@ -14,7 +14,9 @@
         <link href="images/logo-2.png" rel="shortcut icon" type="image/x-icon">
         <link href="images/logo-2.png" rel="apple-touch-icon">
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>     
-      <style>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/brands.min.css" integrity="sha512-EJp8vMVhYl7tBFE2rgNGb//drnr1+6XKMvTyamMS34YwOEFohhWkGq13tPWnK0FbjSS6D8YoA3n3bZmb3KiUYA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <style>
               @keyframes falling {
                   to { top: 821px; }
               }
@@ -120,10 +122,69 @@
                 <p class="" style="font-family: head; color: #fef9f5; font-size: 18px; text-align: center;">   The Myth, The Warrior, The legend</p>
                 <p class="para"><br><span id="animatedText"></span></p>
                 <div class="block_ca">
-                  <div class="ca">TBA</div>
-                  <div class="ca_mobile">TBA</div>
-                  <a href="#" class="copy w-button"></a>
-                </div>
+                    <div class="ca">TBA</div>
+                    <div class="ca_mobile">TBA</div>
+                    <!-- Add the "Copy" button -->
+                    <a href="#" class="w-button" style="background: transparent;" onclick="copyToClipboard(event)">
+                        <i class="fa fa-clone" aria-hidden="true" style="font-size: 18px;"></i>
+                    </a>
+                 </div>
+                 
+                 <script>
+                    function copyToClipboard(event) {
+                       // Prevent the page from refreshing
+                       event.preventDefault();
+                 
+                       // Get the text from the .ca element
+                       const textToCopy = document.querySelector('.ca').textContent;
+                 
+                       // Create a temporary input element to copy the text to the clipboard
+                       const tempInput = document.createElement('input');
+                       tempInput.style.position = 'absolute';
+                       tempInput.style.left = '-9999px';
+                       tempInput.value = textToCopy;
+                       document.body.appendChild(tempInput);
+                       tempInput.select();
+                       document.execCommand('copy');
+                       document.body.removeChild(tempInput);
+                 
+                       // Trigger SweetAlert2 pop-up in the center of the page
+                       Swal.fire({
+                          title: 'Copied!',
+                          text: ' Buy pawpei now',
+                          showConfirmButton: false,
+                          timer: 1500,
+                 
+                          // Customizing the success icon to red
+                          iconHtml: '<i class="fa fa-check-circle" style="color: red;"></i>',
+                          customClass: {
+                             icon: 'no-border',  // No default SweetAlert icon styles
+                             popup: 'custom-popup', // Custom popup class
+                          },
+                       });
+                    }
+                 </script>
+                 
+                 <!-- Add FontAwesome for the custom success icon (optional, you can use your own) -->
+                 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+                 
+                 <style>
+                    /* Styling for the custom popup */
+                    .custom-popup {
+                       background-image: url('/images/background.png'); /* Replace with your actual image URL */
+                       background-size: cover;
+                       background-position: center;
+                       color: red; /* Make text white for better contrast */
+                    }
+                 
+                    /* Remove border and default styling from the icon */
+                    .no-border i {
+                       font-size: 3rem; /* Adjust the size of the icon */
+                    }
+                 </style>
+                 
+                 
+                 
               </div>
     <style>
   #animatedText {
