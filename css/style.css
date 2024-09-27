@@ -316,7 +316,7 @@
 }
 
 .about_bg {
-    background-image: url('../images/bg_about.svg');
+    /* background-image: url('../images/bg_about.svg'); */
     background-position: 0 100%;
     background-repeat: repeat-x;
     background-size: auto 100%;
@@ -580,7 +580,7 @@
 }
 
 .footer_bg {
-    background-image: url('../images/bg_about.svg');
+    /* background-image: url('../images/bg_about.svg'); */
     background-position: 0 100%;
     background-repeat: repeat-x;
     background-size: auto 100%;
