@@ -16,7 +16,7 @@
     height: 100vh;
     height: 100svh;
     display: flex;
-    position: relative;
+    /* position: relative; */
 }
 .spin {
   
@@ -102,6 +102,9 @@
 }
 
 .header_button {
+    height: auto;
+}
+.header_button-2 {
     height: auto;
 }
 
@@ -242,8 +245,8 @@
 }
 
 .about_details {
-    background-color: #990c38;
-    border: 10px #ff005c;
+    background-color: #000;
+    border: 10px #dd0522;
     border-radius: 20px;
     flex-flow: column;
     justify-content: center;
@@ -705,10 +708,13 @@
 }
 
 .ca {
-    color: #ff4f86;
+    color: #dd0522;
     text-align: center;
     font-family: para;
     font-size: 20px;
+}
+html, body{
+    overflow-x: hidden;
 }
 
 .copy {
@@ -819,7 +825,7 @@
 }
 
 .ca_mobile {
-    color: #ff4f86;
+    color: #dd0522;
     text-align: center;
     font-family: para;
     font-size: 20px;
