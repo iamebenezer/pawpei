@@ -554,7 +554,7 @@
 }
 
 .section_join {
-    background-image: url('../images/background.png');
+    background-image: url('/bg.gif');
     background-position: 50%;
     background-size: 350px;
     background-attachment: fixed;
