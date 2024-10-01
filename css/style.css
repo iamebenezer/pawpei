@@ -694,6 +694,12 @@
     position: static;
 }
 
+.social_footer.ter {
+    background-image: url('../images/ter.png');
+    background-size: 110%;
+    position: static;
+}
+
 .social_footer.uni {
     background-image: url('../images/uniswap.svg');
     background-size: 110%;
